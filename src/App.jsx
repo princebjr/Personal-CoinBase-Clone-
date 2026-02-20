@@ -1,42 +1,15 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import React from 'react'
 
-function App() {
-  const [count, setCount] = useState(0);
-
+const App = () => {
   return (
-    <div className="max-w-5xl mx-auto p-8 text-center">
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img
-            src={viteLogo}
-            className="h-24 p-6 transition-[filter] duration-300 hover:drop-shadow-[0_0_2em_#646cffaa]"
-            alt="Vite logo"
-          />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img
-            src={reactLogo}
-            className="h-24 p-6 transition-[filter] duration-300 hover:drop-shadow-[0_0_2em_#61dafbaa] motion-safe:animate-spin-slow"
-            alt="React logo"
-          />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="p-8">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="text-gray-500">
-        Click on the Vite and React logos to learn more
-      </p>
+    <div>
+
+      <h1>This is a clone of a coinbase</h1>website that is used for buying and selling of cryptocurrency. It is a platform that allows users to buy and sell various cryptocurrencies such as Bitcoin, Ethereum, and Litecoin. The website also provides a wallet for users to store their cryptocurrencies and a dashboard to track their investments. The design of the website is simple and user-friendly, making it easy for users to navigate and use the platform.
+      <h1>coin base </h1>
+
+
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
