@@ -4,7 +4,7 @@ const App = () => {
   return (
     <div>
 
-      
+      Let us build a coinbase clone!
 
 
     </div>
