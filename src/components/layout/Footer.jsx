@@ -56,6 +56,18 @@ const COLS = [
     ],
   },
   {
+    heading: 'Institutions',
+    links: [
+      { label: 'Prime', to: '/explore' },
+      { label: 'Staking',  to: '/explore' },
+      {label: 'Exchange',  to: '/explore' },
+      { label: 'International Exchange',  to: '/explore' },
+      { label: 'Derivatives Exchange',  to: '/explore' },
+      { label: 'Verified Pools',  to: '/explore' },
+
+    ]
+  },
+  {
     heading: 'Developers',
     links: [
       { label: 'Base',            to: '/explore' },
@@ -64,7 +76,7 @@ const COLS = [
       { label: 'Developer docs',  to: '/explore' },
     ],
   },
-  
+
   {
     heading: 'Support',
     links: [
