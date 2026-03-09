@@ -9,16 +9,30 @@ const COLS = [
       { label: 'Affiliates', to: '/learn' },
       { label: 'Blog',       to: '/learn' },
       { label: 'Press',      to: '/learn' },
+      { label: 'Security',  to: '/learn' },
+      { label: 'Investors',  to: '/learn' },
+      { label: 'Vendors',  to: '/learn' },
+      { label: 'Legal & privacy',  to: '/learn' },
+      { label: 'Cookie policy',  to: '/learn' },
+      { label: 'Cookie preferences',  to: '/learn' },
+      { label: 'Digital Asset Diclosures',  to: '/learn' },
     ],
   },
   {
     heading: 'Learn',
     links: [
-      { label: 'Browse crypto prices',        to: '/explore' },
-      { label: 'Coinbase Bytes newsletter',   to: '/learn'   },
-      { label: 'Crypto basics',               to: '/learn'   },
-      { label: 'Tips & tutorials',            to: '/learn'   },
+      { label: 'Explore',        to: '/explore' },
+      { label: 'Market statistics',   to: '/learn'   },
+      { label: 'Coinbase Bytes newsletter',               to: '/learn'   },
+      { label: 'Crypto basics',            to: '/learn'   },
+      { label: 'Crypto glossary',              to: '/explore' },
       { label: 'Market updates',              to: '/explore' },
+      { label: 'What is Bitcoin?',              to: '/explore' },
+      { label: 'What is Crypto?',              to: '/explore' },
+      { label: 'What is a Blockchain?',       to: '/explore' },
+      { label: 'How to set up a crypto wallet ', to: '/explore' },
+      { label: 'How to send crypto?',        to: '/explore' },
+      { label: 'Taxes', to: '/explore' },
     ],
   },
   {
@@ -26,18 +40,19 @@ const COLS = [
     links: [
       { label: 'Buy & sell',        to: '/explore' },
       { label: 'Earn free crypto',  to: '/explore' },
-      { label: 'Advanced trading',  to: '/explore' },
-      { label: 'Wallet',            to: '/explore' },
-      { label: 'Card',              to: '/explore' },
+      { label: 'Base App',  to: '/explore' },
+      { label: 'Coinbae One',            to: '/explore' },
+      { label: 'Debit Card',              to: '/explore' },
     ],
   },
   {
     heading: 'Businesses',
     links: [
-      { label: 'Prime',      to: '/explore' },
-      { label: 'Custody',    to: '/explore' },
-      { label: 'Asset Hub',  to: '/explore' },
+      { label: 'Asset Listings',      to: '/explore' },
+      { label: 'Coinbase Business',    to: '/explore' },
+      { label: 'Payments',  to: '/explore' },
       { label: 'Commerce',   to: '/explore' },
+      { label: 'Token Manager',   to: '/explore' },
     ],
   },
   {
@@ -49,6 +64,14 @@ const COLS = [
       { label: 'Developer docs',  to: '/explore' },
     ],
   },
+  
+  {
+    heading: 'Support',
+    links: [
+      { label: 'Help Center', to: '/explore' },
+      { label: 'Contact us',  to: '/explore' },
+    ]
+  }
 ];
 
 function Footer() {
