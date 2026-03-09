@@ -156,7 +156,7 @@ function Home() {
             <div style={{ display: 'flex', gap: '8px', marginBottom: '14px' }} className="hero-cta-row">
               <input
                 type="email"
-                placeholder="Christianagyapong2023@gmail.com"
+                placeholder="princebjr1638@gmail.com"
                 style={{ flex: 1, padding: '13px 16px', border: '1.5px solid #E5E7EB', borderRadius: '8px', fontSize: '0.9375rem', color: '#111827', outline: 'none', minWidth: 0 }}
               />
               <Link
