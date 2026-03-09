@@ -146,11 +146,11 @@ function Home() {
           <div className="hero-anim-left">
             <PhoneMockup />
           </div>
-          <div className="hero-anim-right">
-            <h1 style={{ fontSize: 'clamp(2.25rem, 5vw, 3.75rem)', fontWeight: '800', color: '#111827', lineHeight: '1.1', letterSpacing: '-0.035em', marginBottom: '16px' }}>
+          <div className="hero-anim-right" >
+            <h1 style={{ fontSize: '64px', fontWeight: '400', color: '#000000', lineHeight: '1.1', letterSpacing: '-0.035em', marginBottom: '16px', width:'814.141px', height:'64px' }}>
               The future of<br />finance is here.
             </h1>
-            <p style={{ fontSize: '1rem', color: '#D97706', fontWeight: '600', marginBottom: '32px', lineHeight: '1.6' }}>
+            <p style={{ fontSize: '1rem', color: '#000000', fontWeight: '600', marginBottom: '32px', lineHeight: '28px' ,width:'814.141px', height:'56px' }}>
               Trade crypto and more on a platform you can trust.
             </p>
             <div style={{ display: 'flex', gap: '8px', marginBottom: '14px' }} className="hero-cta-row">
@@ -161,9 +161,9 @@ function Home() {
               />
               <Link
                 to="/signup"
-                style={{ background: '#1652F0', color: '#fff', fontWeight: '700', fontSize: '0.9375rem', padding: '13px 24px', borderRadius: '8px', textDecoration: 'none', whiteSpace: 'nowrap', flexShrink: 0, display: 'inline-flex', alignItems: 'center' }}
+                style={{ background: '#1652F0', color: '#fff', fontWeight: '700', fontSize: '0.9375rem', padding: '13px 24px', borderRadius: '24px', textDecoration: 'none', whiteSpace: 'nowrap', flexShrink: 0, display: 'inline-flex', alignItems: 'center' }}
               >
-                Get started
+                Sign Up
               </Link>
             </div>
           </div>
