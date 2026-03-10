@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useLivePrices } from '../context/LivePricesContext';
 import useReveal from '../hooks/useReveal';
 
-/* Convenience wrapper component */
+
 function Reveal({ children, variant = 'reveal-fade-up', delay = '', className = '', style = {} }) {
   const ref = useReveal();
   return (
@@ -17,7 +17,7 @@ function Reveal({ children, variant = 'reveal-fade-up', delay = '', className = 
   );
 }
 
-/* â”€â”€â”€ Data â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+
 const coinColors = {
   bitcoin:        '#F59E0B',
   ethereum:       '#6366F1',
@@ -89,13 +89,9 @@ const TICKER_ITEMS = [
   { sym: 'DOT', price: '$7.28',   chg: '+3.12%', pos: true },
 ];
 
-/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-   Sub-components
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
-/* Live ticker tape at the very top */
 function TickerTape() {
-  const items = [...TICKER_ITEMS, ...TICKER_ITEMS]; // duplicate for seamless loop
+  const items = [...TICKER_ITEMS, ...TICKER_ITEMS]; 
   return (
     <div
       className="ticker-wrap"
@@ -189,9 +185,6 @@ function HeroChart({ activeTime, setActiveTime }) {
   );
 }
 
-/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-   Main page
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 function AdvancedTrading() {
   const cryptoData = useLivePrices() ?? [];
   const [activeTime, setActiveTime] = useState('1D');
@@ -335,7 +328,7 @@ function AdvancedTrading() {
               </div>
             </Reveal>
 
-            {/* Trade Panel */}
+            
             <Reveal variant="reveal-right" delay="reveal-delay-1">
               <div style={{ background: '#fff', border: '1px solid #E5E7EB', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 1px 8px rgba(0,0,0,0.04)' }}>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
@@ -422,7 +415,7 @@ function AdvancedTrading() {
         </div>
       </section>
 
-      {/* â•â• FEATURES GRID â•â• */}
+      
       <section style={{ padding: '80px 0', background: '#F9FAFB', borderBottom: '1px solid #F3F4F6' }}>
         <div style={{ maxWidth: '1160px', margin: '0 auto', padding: '0 24px' }}>
           <Reveal variant="reveal-fade-up" style={{ textAlign: 'center', marginBottom: '56px' }}>
@@ -457,7 +450,7 @@ function AdvancedTrading() {
         </div>
       </section>
 
-      {/* â•â• MARKETS TABLE â•â• */}
+      
       <section style={{ padding: '72px 0', background: '#fff', borderBottom: '1px solid #F3F4F6' }}>
         <div style={{ maxWidth: '1160px', margin: '0 auto', padding: '0 24px' }}>
           <Reveal variant="reveal-fade-up">
@@ -522,7 +515,7 @@ function AdvancedTrading() {
         </div>
       </section>
 
-      {/* â•â• STATS BAND â•â• */}
+      
       <section style={{ padding: '72px 0', background: '#0A0B0D' }}>
         <div style={{ maxWidth: '1160px', margin: '0 auto', padding: '0 24px' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '32px', textAlign: 'center' }} className="stats-grid">
@@ -543,7 +536,7 @@ function AdvancedTrading() {
         </div>
       </section>
 
-      {/* â•â• CTA BANNER â•â• */}
+      
       <section style={{ padding: '88px 0', background: '#1652F0' }}>
         <div style={{ maxWidth: '700px', margin: '0 auto', padding: '0 24px', textAlign: 'center' }}>
           <Reveal variant="reveal-scale">

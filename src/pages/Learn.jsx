@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import useReveal from '../hooks/useReveal';
 
-// useReveal is imported from src/hooks/useReveal.js
 
 function Reveal({ children, variant = 'reveal-fade-up', delay = '', className = '', style = {} }) {
   const ref = useReveal();
@@ -196,7 +195,7 @@ function Learn() {
   return (
     <div style={{ minHeight: '100vh', background: '#fff', color: '#111827' }}>
 
-      {/* ── HERO ── */}
+      
       <div style={{ borderBottom: '1px solid #E5E7EB', paddingTop: '56px', paddingBottom: '52px' }}>
         <div style={{ maxWidth: '1120px', margin: '0 auto', padding: '0 24px', textAlign: 'center' }} className="hero-anim-up">
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#EEF2FF', border: '1px solid #C7D2FE', borderRadius: '99px', padding: '6px 16px', marginBottom: '24px' }}>
@@ -211,7 +210,7 @@ function Learn() {
             Complete short lessons and quizzes to earn crypto. Join over 1 million students building their knowledge and portfolio simultaneously.
           </p>
 
-          {/* Stats row */}
+         
           <div style={{ display: 'flex', justifyContent: 'center', gap: '48px', flexWrap: 'wrap' }}>
             {[
               { value: '100+', label: 'Learning Modules' },
@@ -227,7 +226,7 @@ function Learn() {
         </div>
       </div>
 
-      {/* ── HOW IT WORKS ── */}
+      
       <div style={{ background: '#F9FAFB', borderBottom: '1px solid #E5E7EB' }}>
         <div style={{ maxWidth: '1120px', margin: '0 auto', padding: '44px 24px' }}>
           <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: '800', marginBottom: '32px', letterSpacing: '-0.02em', color: '#111827' }}>How it works</h2>
@@ -249,10 +248,10 @@ function Learn() {
         </div>
       </div>
 
-      {/* ── COURSES ── */}
+      
       <div style={{ maxWidth: '1120px', margin: '0 auto', padding: 'clamp(28px,5vw,48px) 24px clamp(36px,6vw,80px)' }}>
 
-        {/* Category filter */}
+        
         <div ref={filterRef} style={{ display: 'flex', gap: '8px', marginBottom: '32px', flexWrap: 'wrap' }} className="reveal reveal-fade-up">
           {CATEGORIES.map(cat => (
             <button
@@ -276,7 +275,7 @@ function Learn() {
           <span style={{ marginLeft: 'auto', color: '#9CA3AF', fontSize: '0.875rem', alignSelf: 'center' }}>{filtered.length} course{filtered.length !== 1 ? 's' : ''}</span>
         </div>
 
-        {/* Cards grid */}
+       
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px' }} className="learn-cards-grid">
           {filtered.map((topic, idx) => (
             <Reveal key={topic.id} variant="reveal-scale" delay={`reveal-delay-${(idx % 6) + 1}`} style={{ display: 'flex', flexDirection: 'column' }}>
@@ -295,7 +294,7 @@ function Learn() {
                 flex: 1,
               }}
             >
-              {/* Thumb */}
+              
               <div
                 style={{
                   height: '120px',
@@ -321,7 +320,7 @@ function Learn() {
                 </div>
               </div>
 
-              {/* Body */}
+              
               <div style={{ padding: '18px' }}>
                 <div style={{ display: 'flex', gap: '6px', marginBottom: '10px' }}>
                   <span style={{ fontSize: '0.7rem', fontWeight: '600', padding: '2px 8px', borderRadius: '99px', background: '#F3F4F6', color: '#374151', border: '1px solid #E5E7EB' }}>{topic.category}</span>
@@ -366,7 +365,7 @@ function Learn() {
         </div>
       </div>
 
-      {/* ── CTA BANNER ── */}
+      
       <div style={{ borderTop: '1px solid #E5E7EB' }}>
         <div style={{ maxWidth: '1120px', margin: '0 auto', padding: '0 24px clamp(32px,6vw,72px)' }}>
           <div ref={ctaBannerRef} style={{

@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import useReveal from '../hooks/useReveal';
 
-// useReveal is imported from src/hooks/useReveal.js
+
 
 function SignIn() {
   const [email, setEmail] = useState('');
@@ -19,7 +19,7 @@ function SignIn() {
 
   return (
     <div style={{ minHeight: '100vh', background: '#FFFFFF', display: 'flex', flexDirection: 'column', lineHeight: 'normal', letterSpacing: 'normal', fontSize:'16px',width:'448px', margin:'0 auto' ,}}>
-      {/* Logo */}
+      
       <div style={{ padding: '22px 28px',gap:'10px', display: 'flex', alignItems: 'center' }}>
         <Link to="/" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
           <svg width="32" height="32" viewBox="0 0 28 28" fill="none">
@@ -29,7 +29,7 @@ function SignIn() {
         </Link>
       </div>
 
-      {/* Main content */}
+     
       <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '16px 24px 64px' }}>
         <div ref={formRef} style={{ width: '100%', maxWidth: '480px' }} className="reveal reveal-fade-up">
 
@@ -95,16 +95,16 @@ function SignIn() {
             </button>
           </form>
 
-          {/* OR divider */}
+          
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '14px',width:'400px' }}>
             <div style={{ flex: 1, height: '1px', background: '#121316' }} />
             <span style={{ color: '#5B616E', fontSize: '13px', fontWeight: '400', letterSpacing: 'normal' }}>OR</span>
             <div style={{ flex: 1, height: '1px', background: '#121316' }} />
           </div>
 
-          {/* Social / Passkey buttons */}
+         
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '28px' }}>
-            {/* Passkey */}
+           
             <button
               type="button"
               style={{ display: 'flex', width: '400px', height: '56px', alignItems: 'center', justifyContent: 'center', gap: '12px', fontfamily:'Times', background: '#EEF0F3',  borderRadius: '56px', padding: '32px', color:'#0A0B0D', fontWeight: '600', fontSize: '1rem', cursor: 'pointer' }}
@@ -119,7 +119,7 @@ function SignIn() {
               Sign in with Passkey
             </button>
 
-            {/* Google */}
+           
             <button
               type="button"
               style={{ display: 'flex', width: '400px', height: '56px', alignItems: 'center', justifyContent: 'center', gap: '12px', background: '#EEF0F3', borderRadius: '56px', padding: '13px', color: '#0A0B0D', fontWeight: '700', fontSize: '1rem', cursor: 'pointer' }}
@@ -135,7 +135,7 @@ function SignIn() {
               Sign in with Google
             </button>
 
-            {/* Apple */}
+            
             <button
               type="button"
               style={{ display: 'flex',width: '400px', height: '56px', alignItems: 'center', justifyContent: 'center', gap: '12px', background: '#EEF0F3',  borderRadius: '56px', padding: '13px', color: '#0a0b0d', fontWeight: '700', fontSize: '1rem', cursor: 'pointer' }}

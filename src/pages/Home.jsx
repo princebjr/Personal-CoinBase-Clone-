@@ -171,7 +171,7 @@ function Home() {
       </section>
 
 
-      {/* EXPLORE CRYPTO */}
+      
       <section style={{ background: '#F9FAFB', padding: '80px 0', borderTop: '1px solid #F3F4F6' }}>
         <div ref={exploreRef} style={{ maxWidth: '1160px', margin: '0 auto', padding: '0 24px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '56px', alignItems: 'center' }} className="explore-grid reveal reveal-fade-up">
           <div>
@@ -226,10 +226,10 @@ function Home() {
         </div>
       </section>
 
-      {/* ADVANCED TRADER */}
+     
       <section style={{ padding: '88px 0', background: '#ffffff', borderTop: '1px solid #F3F4F6' }}>
         <div ref={advancedRef} style={{ maxWidth: '1160px', margin: '0 auto', padding: '0 24px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '56px', alignItems: 'center' }} className="hero-grid reveal reveal-left">
-          {/* Trading chart mockup */}
+          
           <div style={{ background: '#0A0B0D', borderRadius: '20px', padding: '0', overflow: 'hidden', boxShadow: '0 24px 60px rgba(0,0,0,0.22)', minHeight: '300px', position: 'relative' }}>
             <div style={{ padding: '14px 16px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}>
@@ -254,7 +254,7 @@ function Home() {
                   <stop offset="100%" stopColor="#22C55E" stopOpacity="0.02"/>
                 </linearGradient>
               </defs>
-              {/* Candlesticks */}
+              
               {[
                 [20,80,65,72,88],[36,70,55,62,78],[52,90,72,76,92],[68,65,50,55,70],
                 [84,55,40,42,60],[100,45,30,32,50],[116,50,35,38,55],[132,40,22,26,44],
@@ -273,7 +273,7 @@ function Home() {
                 );
               })}
             </svg>
-            {/* Order book panel */}
+            
             <div style={{ margin: '0 12px 12px', background: '#111213', borderRadius: '10px', padding: '10px 12px' }}>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
                 <div>
@@ -297,7 +297,7 @@ function Home() {
               </div>
             </div>
           </div>
-          {/* Text */}
+         
           <div>
             <h2 style={{ fontSize: 'clamp(1.875rem, 4vw, 3rem)', fontWeight: '800', color: '#111827', lineHeight: '1.12', letterSpacing: '-0.03em', marginBottom: '16px' }}>
               Powerful tools, designed<br />for the advanced trader.
@@ -315,10 +315,10 @@ function Home() {
         </div>
       </section>
 
-      {/* COINBASE ONE — ZERO FEES */}
+      
       <section style={{ padding: '88px 0', background: '#ffffff' }}>
         <div ref={coinbaseOneRef} style={{ maxWidth: '1160px', margin: '0 auto', padding: '0 24px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '56px', alignItems: 'center' }} className="explore-grid reveal reveal-right">
-          {/* Text */}
+          
           <div>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', border: '1.5px solid #E5E7EB', borderRadius: '99px', padding: '5px 12px', marginBottom: '20px' }}>
               <div style={{ width: '14px', height: '14px', borderRadius: '50%', background: '#1652F0', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -336,7 +336,7 @@ function Home() {
               Claim free trial
             </Link>
           </div>
-          {/* Phone mockup */}
+          
           <div style={{ background: '#F3F4F6', borderRadius: '24px', padding: '28px 24px', boxShadow: '0 8px 32px rgba(0,0,0,0.08)', maxWidth: '340px', margin: '0 auto', width: '100%' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
               <span style={{ fontSize: '12px', fontWeight: '700', color: '#111827' }}>3:57</span>
@@ -381,10 +381,10 @@ function Home() {
         </div>
       </section>
 
-      {/* NEW TO CRYPTO — LEARN BASICS */}
+      
       <section style={{ padding: '80px 0 72px', background: '#F3F4F6' }}>
         <div style={{ maxWidth: '1160px', margin: '0 auto', padding: '0 24px' }}>
-          {/* Header row */}
+          
           <div ref={learnHdrRef} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '48px', alignItems: 'flex-end', marginBottom: '40px' }} className="explore-grid reveal reveal-fade-up">
             <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: '800', color: '#111827', lineHeight: '1.12', letterSpacing: '-0.03em', margin: 0 }}>
               New to crypto?<br />Learn some<br />crypto basics
@@ -398,7 +398,7 @@ function Home() {
               </Link>
             </div>
           </div>
-          {/* Article cards */}
+         
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }} className="article-grid">
             {[
               {
@@ -490,7 +490,7 @@ function Home() {
         </div>
       </section>
 
-      {/* FEATURES */}
+      
       <section style={{ padding: '88px 0', background: '#ffffff' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 24px' }}>
           <div ref={featHdrRef} style={{ textAlign: 'center', marginBottom: '56px' }} className="reveal reveal-fade-up">
@@ -521,7 +521,7 @@ function Home() {
         </div>
       </section>
 
-      {/* STATS */}
+      
       <section style={{ background: '#F9FAFB', borderTop: '1px solid #F3F4F6', borderBottom: '1px solid #F3F4F6', padding: '56px 24px' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '32px', textAlign: 'center' }}>
           {[{ value: '$100B+', label: 'Total assets traded' }, { value: '100+', label: 'Countries supported' }, { value: '50M+', label: 'Verified users' }].map(({ value, label }, idx) => (
@@ -535,7 +535,7 @@ function Home() {
         </div>
       </section>
 
-      {/* LEARN & EARN CTA */}
+      
       <section style={{ padding: '80px 24px', background: '#ffffff' }}>
         <div ref={ctaRef} style={{ maxWidth: '820px', margin: '0 auto', background: '#1652F0', borderRadius: '20px', padding: 'clamp(40px, 6vw, 72px) clamp(24px, 5vw, 64px)', textAlign: 'center' }} className="reveal reveal-scale">
           <p style={{ fontSize: '0.75rem', fontWeight: '700', letterSpacing: '0.1em', color: 'rgba(255,255,255,0.65)', textTransform: 'uppercase', margin: '0 0 14px' }}>LEARN &amp; EARN</p>

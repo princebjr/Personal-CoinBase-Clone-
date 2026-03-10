@@ -4,7 +4,7 @@ import { useLivePrices } from '../context/LivePricesContext';
 import useReveal from '../hooks/useReveal';
 import PriceChart from '../components/crypto/PriceChart';
 
-// useReveal is imported from src/hooks/useReveal.js
+
 
 const coinColors = {
   bitcoin:      '#F59E0B',
@@ -19,7 +19,7 @@ const coinColors = {
   polkadot:     '#EC4899',
 };
 
-// Fake mini sparkline for each coin
+
 function Sparkline({ positive }) {
   const up   = 'M0,60 C20,55 35,42 55,35 C75,28 85,32 105,22 C125,12 135,8 160,5 C175,3 185,10 200,8';
   const down = 'M0,8  C20,12 35,20 55,28 C75,36 85,30 105,38 C125,46 135,52 160,56 C175,58 185,54 200,58';
@@ -73,13 +73,13 @@ function AssetDetail() {
     <div style={{ background: '#F9FAFB', minHeight: '100vh', padding: '32px 0 64px' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
 
-        {/* Main two-col */}
+       
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 360px', gap: '24px', alignItems: 'start' }} className="asset-layout">
 
-          {/* ── LEFT COLUMN ── */}
+         
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }} className="hero-anim-left">
 
-            {/* Header card */}
+            
             <div style={{ background: '#fff', border: '1px solid #E5E7EB', borderRadius: '16px', padding: '28px 28px 24px', boxShadow: '0 1px 8px rgba(0,0,0,0.04)' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }} className="asset-header-flex">
                 <div style={{ width: 56, height: 56, borderRadius: '16px', background: iconColor, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
@@ -97,15 +97,15 @@ function AssetDetail() {
                 </div>
               </div>
 
-              {/* Chart area */}
+              
               <div style={{ background: '#F9FAFB', borderRadius: '12px', padding: '20px 20px 8px', marginBottom: '20px', position: 'relative', overflow: 'hidden' }}>
-                {/* Time tabs */}
+                
                 <div style={{ display: 'flex', gap: '4px', marginBottom: '16px' }}>
                   {['1H','1D','1W','1M','1Y','All'].map((t, i) => (
                     <button key={t} style={{ padding: '4px 10px', fontSize: '0.75rem', fontWeight: '600', borderRadius: '6px', border: 'none', cursor: 'pointer', background: i === 1 ? '#1652F0' : 'transparent', color: i === 1 ? '#fff' : '#6B7280' }}>{t}</button>
                   ))}
                 </div>
-                {/* SVG chart */}
+               
                 <div style={{ width: '100%', height: '140px', position: 'relative' }}>
                   <svg width="100%" height="140" viewBox="0 0 800 140" preserveAspectRatio="none">
                     <defs>
@@ -124,14 +124,14 @@ function AssetDetail() {
                           <path d="M0,10 C40,12 80,20 130,32 C180,44 220,38 270,52 C320,66 360,72 410,86 C460,100 500,92 550,106 C600,118 640,115 700,120 C740,124 770,122 800,125" fill="none" stroke="#DC2626" strokeWidth="2.5" strokeLinecap="round"/>
                         </>
                     }
-                    {/* Hover dot at end */}
+                   
                     <circle cx="800" cy={isPositive ? '5' : '125'} r="5" fill={isPositive ? '#16A34A' : '#DC2626'}/>
                     <circle cx="800" cy={isPositive ? '5' : '125'} r="9" fill={isPositive ? '#16A34A' : '#DC2626'} fillOpacity="0.2"/>
                   </svg>
                 </div>
               </div>
 
-              {/* Stats row */}
+              
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '12px' }} className="asset-stats-grid">
                 {[
                   { label: 'Market Cap',   value: `$${(crypto.marketCap / 1e9).toFixed(2)}B` },
@@ -147,17 +147,17 @@ function AssetDetail() {
               </div>
             </div>
 
-            {/* About card */}
+           
             <div ref={aboutRef} style={{ background: '#fff', border: '1px solid #E5E7EB', borderRadius: '16px', padding: '24px 28px', boxShadow: '0 1px 8px rgba(0,0,0,0.04)' }} className="reveal reveal-fade-up">
               <h2 style={{ fontSize: '1.125rem', fontWeight: '700', color: '#111827', marginBottom: '12px' }}>About {crypto.name}</h2>
               <p style={{ fontSize: '0.9375rem', color: '#4B5563', lineHeight: '1.75', margin: 0 }}>{crypto.description}</p>
             </div>
           </div>
 
-          {/* ── RIGHT COLUMN — Trade Panel ── */}
+          
           <div style={{ background: '#fff', border: '1px solid #E5E7EB', borderRadius: '16px', boxShadow: '0 1px 8px rgba(0,0,0,0.04)', overflow: 'hidden', position: 'sticky', top: '80px' }} className="hero-anim-right">
 
-            {/* Buy / Sell tabs */}
+            
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', borderBottom: '1px solid #F3F4F6' }}>
               {['buy','sell'].map(tab => (
                 <button
@@ -172,7 +172,7 @@ function AssetDetail() {
 
             <div style={{ padding: '20px' }}>
 
-              {/* Order type */}
+              
               <div style={{ marginBottom: '16px' }}>
                 <label style={{ fontSize: '0.75rem', fontWeight: '600', color: '#6B7280', textTransform: 'uppercase', letterSpacing: '0.04em', display: 'block', marginBottom: '6px' }}>Order Type</label>
                 <div style={{ display: 'flex', gap: '6px' }}>
@@ -186,7 +186,7 @@ function AssetDetail() {
                 </div>
               </div>
 
-              {/* Spend input */}
+              
               <div style={{ marginBottom: '12px' }}>
                 <label style={{ fontSize: '0.75rem', fontWeight: '600', color: '#6B7280', textTransform: 'uppercase', letterSpacing: '0.04em', display: 'block', marginBottom: '6px' }}>
                   {tradeTab === 'buy' ? 'Spend (USD)' : 'Sell Amount (USD)'}
@@ -214,7 +214,7 @@ function AssetDetail() {
                 </div>
               </div>
 
-              {/* Receive display */}
+             
               <div style={{ background: '#F9FAFB', border: '1px solid #F3F4F6', borderRadius: '10px', padding: '12px 14px', marginBottom: '16px' }}>
                 <p style={{ fontSize: '0.75rem', fontWeight: '600', color: '#9CA3AF', textTransform: 'uppercase', letterSpacing: '0.04em', margin: '0 0 4px' }}>
                   {tradeTab === 'buy' ? `Receive (${crypto.symbol})` : 'Receive (USD)'}
@@ -226,7 +226,7 @@ function AssetDetail() {
                 </p>
               </div>
 
-              {/* Price & fee breakdown */}
+              
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '20px', padding: '12px 14px', background: '#FAFAFA', borderRadius: '10px', border: '1px solid #F3F4F6' }}>
                 {[
                   { label: `${crypto.symbol} price`, value: fmt(crypto.price) },
@@ -240,7 +240,7 @@ function AssetDetail() {
                 ))}
               </div>
 
-              {/* CTA button */}
+              
               <button
                 style={{
                   width: '100%', padding: '14px', borderRadius: '10px', border: 'none', cursor: 'pointer',
@@ -255,7 +255,7 @@ function AssetDetail() {
                 {tradeTab === 'buy' ? `Buy ${crypto.symbol}` : `Sell ${crypto.symbol}`}
               </button>
 
-              {/* Disclaimer */}
+              
               <p style={{ fontSize: '0.7rem', color: '#9CA3AF', textAlign: 'center', marginTop: '12px', lineHeight: '1.5', margin: '12px 0 0' }}>
                 By placing this order you agree to our{' '}
                 <Link to="/learn" style={{ color: '#1652F0', textDecoration: 'none' }}>User Agreement</Link>.

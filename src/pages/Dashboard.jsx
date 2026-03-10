@@ -5,7 +5,7 @@ import { useAuth } from '../context/AuthContext';
 import useReveal from '../hooks/useReveal';
 import CryptoCard from '../components/crypto/CryptoCard';
 
-// ── Static portfolio data ─────────────────────────────────────
+
 const PORTFOLIO_ASSETS = [
   { name: 'Crypto',       initial: '₿', color: '#D97706', bg: '#FEF3C7', value: 14186.12, change: null   },
   { name: 'Stocks',       initial: 'S', color: '#2563EB', bg: '#DBEAFE', value: 8133.98,  change: null   },
@@ -23,12 +23,11 @@ const RECENT_TXS = [
 
 const PERIODS = ['1H', '1D', '1W', '1M', '1Y', 'All'];
 
-// Smooth upward chart path (viewBox 0 0 600 160)
+
 const CHART_PATH = 'M0 142 C30 135,60 125,95 115 S145 120,175 108 S220 90,255 78 S295 88,325 72 S370 52,405 44 S450 48,480 35 S530 28,560 22 S585 20,600 18';
 const CHART_FILL = CHART_PATH + ' L600 160 L0 160 Z';
 
-// ── Reveal hook/component ─────────────────────────────────────
-// useReveal is imported from src/hooks/useReveal.js
+
 function Reveal({ children, className = 'reveal-fade-up', delay = 0, style = {} }) {
   const ref = useReveal();
   return (
@@ -38,7 +37,7 @@ function Reveal({ children, className = 'reveal-fade-up', delay = 0, style = {} 
   );
 }
 
-// ── Dashboard ─────────────────────────────────────────────────
+
 export default function Dashboard() {
   const cryptoData = useLivePrices() ?? [];
   const { user } = useAuth();
@@ -58,7 +57,7 @@ export default function Dashboard() {
   return (
     <div style={{ background: '#F3F4F6', minHeight: 'calc(100vh - 65px)' }}>
 
-      {/* ── Page header ── */}
+      
       <div style={{ background: '#fff', borderBottom: '1px solid #E5E7EB' }}>
         <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '20px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '12px' }}>
           <div>
@@ -75,15 +74,15 @@ export default function Dashboard() {
         </div>
       </div>
 
-      {/* ── Main 2-column grid ── */}
+      
       <div
         className="dashboard-grid"
         style={{ maxWidth: '1280px', margin: '0 auto', padding: '28px 24px', display: 'grid', gridTemplateColumns: 'minmax(0,1.6fr) 360px', gap: '22px', alignItems: 'start' }}
       >
-        {/* ────────── LEFT COLUMN ────────── */}
+        
         <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
 
-          {/* Portfolio card */}
+          
           <Reveal delay={0}>
             <div style={{ background: '#fff', borderRadius: '20px', border: '1px solid #E5E7EB', overflow: 'hidden' }}>
               <div style={{ padding: '26px 28px 0' }}>
@@ -92,7 +91,7 @@ export default function Dashboard() {
                   <span style={{ fontSize: 'clamp(1.75rem,4vw,2.25rem)', fontWeight: '800', color: '#111827', letterSpacing: '-0.03em' }}>$33,683.80</span>
                   <span style={{ color: '#22C55E', fontWeight: '700', fontSize: '0.9375rem' }}>▲ $131.36 (1.38%) today</span>
                 </div>
-                {/* Period selector */}
+                
                 <div style={{ display: 'flex', gap: '3px', marginTop: '20px', marginBottom: '4px' }}>
                   {PERIODS.map(p => (
                     <button
@@ -106,7 +105,7 @@ export default function Dashboard() {
                 </div>
               </div>
 
-              {/* Chart */}
+              
               <div style={{ padding: '4px 0 0' }}>
                 <svg viewBox="0 0 600 160" style={{ width: '100%', height: '130px', display: 'block' }} preserveAspectRatio="none">
                   <defs>
@@ -120,7 +119,7 @@ export default function Dashboard() {
                 </svg>
               </div>
 
-              {/* Asset breakdown */}
+              
               <div style={{ padding: '4px 28px 22px', borderTop: '1px solid #F3F4F6' }}>
                 {PORTFOLIO_ASSETS.map((a) => (
                   <div key={a.name} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '13px 0', borderBottom: '1px solid #F9FAFB' }}>
@@ -148,7 +147,7 @@ export default function Dashboard() {
             </div>
           </Reveal>
 
-          {/* Crypto watchlist table */}
+          
           <Reveal delay={80}>
             <div style={{ background: '#fff', borderRadius: '20px', border: '1px solid #E5E7EB', padding: '24px 28px' }}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '18px' }}>
@@ -206,15 +205,15 @@ export default function Dashboard() {
           </Reveal>
         </div>
 
-        {/* ────────── RIGHT COLUMN ────────── */}
+       
         <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
 
-          {/* Quick Trade */}
+         
           <Reveal delay={120}>
             <div style={{ background: '#fff', borderRadius: '20px', border: '1px solid #E5E7EB', padding: '24px' }}>
               <h2 style={{ fontSize: '1.0625rem', fontWeight: '800', color: '#111827', margin: '0 0 18px' }}>Quick Trade</h2>
 
-              {/* Buy / Sell toggle */}
+              
               <div style={{ display: 'flex', background: '#F3F4F6', borderRadius: '12px', padding: '4px', marginBottom: '18px' }}>
                 {['buy', 'sell'].map(tab => (
                   <button
@@ -227,7 +226,7 @@ export default function Dashboard() {
                 ))}
               </div>
 
-              {/* Coin selector */}
+              
               <label style={{ display: 'block', color: '#374151', fontWeight: '600', fontSize: '0.8125rem', marginBottom: '6px' }}>Asset</label>
               <select
                 value={selectedCoin}
@@ -241,7 +240,7 @@ export default function Dashboard() {
                 ))}
               </select>
 
-              {/* Amount */}
+             
               <label style={{ display: 'block', color: '#374151', fontWeight: '600', fontSize: '0.8125rem', marginBottom: '6px' }}>Amount (USD)</label>
               <div style={{ position: 'relative', marginBottom: '14px' }}>
                 <span style={{ position: 'absolute', left: '14px', top: '50%', transform: 'translateY(-50%)', color: '#9CA3AF', fontWeight: '700', fontSize: '1rem', pointerEvents: 'none' }}>$</span>
@@ -257,7 +256,7 @@ export default function Dashboard() {
                 />
               </div>
 
-              {/* Estimated receive */}
+              
               {estimatedReceive && (
                 <div style={{ background: '#EFF4FF', borderRadius: '10px', padding: '10px 14px', marginBottom: '14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                   <span style={{ fontSize: '0.8125rem', color: '#6B7280', fontWeight: '600' }}>You receive ≈</span>
@@ -281,7 +280,7 @@ export default function Dashboard() {
             </div>
           </Reveal>
 
-          {/* Recent Activity */}
+          
           <Reveal delay={160}>
             <div style={{ background: '#fff', borderRadius: '20px', border: '1px solid #E5E7EB', padding: '24px' }}>
               <h2 style={{ fontSize: '1.0625rem', fontWeight: '800', color: '#111827', margin: '0 0 16px' }}>Recent Activity</h2>
@@ -310,7 +309,7 @@ export default function Dashboard() {
             </div>
           </Reveal>
 
-          {/* Verify identity banner */}
+         
           <Reveal className="reveal-scale" delay={200}>
             <div style={{ background: 'linear-gradient(135deg,#1652F0 0%,#0A38B8 100%)', borderRadius: '20px', padding: '24px', color: '#fff' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>

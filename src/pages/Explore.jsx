@@ -120,13 +120,13 @@ function Explore() {
   return (
     <div style={{ minHeight: '100vh', background: '#fff' }}>
 
-      {/* ══════════ TOP PANEL ══════════ */}
+     
       <div style={{ borderBottom: '1px solid #E5E7EB' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '32px 24px 0', display: 'grid', gridTemplateColumns: '1fr 296px', gap: '28px', alignItems: 'start' }} className="explore-hero-grid">
 
-          {/* ── LEFT: title, search, market stats ── */}
+          
           <div>
-            {/* Title row */}
+           
             <div style={{ marginBottom: '18px' }} className="hero-anim-up">
               <h1 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: '800', color: '#111827', letterSpacing: '-0.025em', margin: '0 0 5px' }}>
                 Explore crypto
@@ -141,7 +141,7 @@ function Explore() {
               </div>
             </div>
 
-            {/* Pill search bar */}
+           
             <div style={{ position: 'relative', marginBottom: '28px' }} className="hero-anim-up hero-delay-1">
               <div style={{ position: 'absolute', top: '50%', left: '18px', transform: 'translateY(-50%)', pointerEvents: 'none' }}>
                 <svg width="17" height="17" fill="none" stroke="#9CA3AF" strokeWidth="2.2" strokeLinecap="round" viewBox="0 0 24 24">
@@ -167,7 +167,7 @@ function Explore() {
               />
             </div>
 
-            {/* Market stats */}
+            
             <div style={{ paddingBottom: '28px' }}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '6px' }}>
                 <h2 style={{ fontSize: '1.125rem', fontWeight: '800', color: '#111827', margin: 0, letterSpacing: '-0.02em' }}>Market stats</h2>
@@ -200,14 +200,14 @@ function Explore() {
             </div>
           </div>
 
-          {/* ── RIGHT sidebar ── */}
+         
           <div ref={sidebarRef} style={{ display: 'flex', flexDirection: 'column', gap: '16px', paddingBottom: '28px' }} className="reveal reveal-right">
 
-            {/* Get started card */}
+            
             <div style={{ background: '#1652F0', borderRadius: '16px', padding: '22px', position: 'relative', overflow: 'hidden' }}>
-              {/* Decorative rings */}
+              
               <div style={{ position: 'absolute', top: '-28px', right: '-28px', width: '120px', height: '120px', borderRadius: '50%', border: '22px solid rgba(255,255,255,0.1)', pointerEvents: 'none' }}/>
-              {/* Coin illustration */}
+             
               <div style={{ position: 'absolute', top: '14px', right: '16px', display: 'flex', gap: '6px', alignItems: 'flex-start' }}>
                 <div style={{ width: '46px', height: '46px', borderRadius: '50%', background: 'linear-gradient(135deg,#F59E0B,#D97706)', border: '3px solid rgba(255,255,255,0.35)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 6px 16px rgba(0,0,0,0.28)', zIndex: 1 }}>
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z"/></svg>
@@ -228,7 +228,7 @@ function Explore() {
               </Link>
             </div>
 
-            {/* Top movers */}
+            
             <div style={{ border: '1px solid #E5E7EB', borderRadius: '16px', padding: '18px', background: '#fff' }}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '3px' }}>
                 <h3 style={{ fontSize: '1rem', fontWeight: '800', color: '#111827', margin: 0 }}>Top movers</h3>
@@ -268,7 +268,7 @@ function Explore() {
         </div>
       </div>
 
-      {/* ══════════ ASSETS TABLE ══════════ */}
+      
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '32px 24px 56px' }}>
 
         <div ref={tableRef} style={{ border: '1.5px solid #E5E7EB', borderRadius: '16px', overflow: 'hidden' }} className="reveal reveal-fade-up">

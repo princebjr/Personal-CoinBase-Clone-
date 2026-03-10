@@ -3,7 +3,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import useReveal from '../hooks/useReveal';
 
-// useReveal is imported from src/hooks/useReveal.js
 
 const ACCOUNT_TYPES = [
   {
@@ -71,7 +70,7 @@ function SignUp() {
 
   return (
     <div style={{ minHeight: '100vh', background: '#0A0B0D', display: 'flex', flexDirection: 'column' }}>
-      {/* Logo */}
+      
       <div style={{ padding: '22px 28px' }}>
         <Link to="/" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
           <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
@@ -81,11 +80,11 @@ function SignUp() {
         </Link>
       </div>
 
-      {/* Main content */}
+      
       <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '16px 24px 48px' }}>
         <div ref={formRef} style={{ width: '100%', maxWidth: '480px' }} className="reveal reveal-fade-up">
 
-          {/* ── STEP 1: Account type picker ── */}
+          
           {step === 1 && (
             <div>
               <h1 style={{ color: '#fff', fontSize: 'clamp(1.5rem, 5vw, 2rem)', fontWeight: '800', marginBottom: '28px', lineHeight: '1.25', letterSpacing: '-0.025em' }}>
@@ -127,7 +126,7 @@ function SignUp() {
             </div>
           )}
 
-          {/* ── STEP 2: Email + social ── */}
+          
           {step === 2 && (
             <div>
               <h1 style={{ color: '#fff', fontSize: 'clamp(1.5rem, 5vw, 2rem)', fontWeight: '800', marginBottom: '8px', letterSpacing: '-0.025em' }}>
@@ -184,14 +183,14 @@ function SignUp() {
                 </button>
               </form>
 
-              {/* OR */}
+             
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '14px' }}>
                 <div style={{ flex: 1, height: '1px', background: '#232427' }} />
                 <span style={{ color: '#6B7280', fontSize: '0.8125rem', fontWeight: '600', letterSpacing: '0.06em' }}>OR</span>
                 <div style={{ flex: 1, height: '1px', background: '#232427' }} />
               </div>
 
-              {/* Social */}
+              
               <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '28px' }}>
                 {[
                   {
