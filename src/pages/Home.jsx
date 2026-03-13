@@ -55,7 +55,7 @@ function PhoneMockup() {
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <div style={{ width: '26px', height: '26px', background: '#1652F0', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <span style={{ color: '#fff', fontWeight: '900', fontSize: '11px' }}>C</span>
+              <span style={{ color: '#fff', fontWeight: '500', fontSize: '11px' }}>C</span>
             </div>
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#374151" strokeWidth="2" strokeLinecap="round"><rect x="3" y="3" width="4" height="18" rx="1"/><rect x="10" y="8" width="4" height="13" rx="1"/><rect x="17" y="5" width="4" height="16" rx="1"/></svg>
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#374151" strokeWidth="2" strokeLinecap="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
@@ -63,8 +63,8 @@ function PhoneMockup() {
         </div>
 
         <div style={{ padding: '16px 16px 4px' }}>
-          <p style={{ fontSize: '26px', fontWeight: '800', color: '#111827', letterSpacing: '-0.02em', margin: '0 0 4px' }}>$33,683.80</p>
-          <p style={{ fontSize: '12px', color: '#22C55E', fontWeight: '600', margin: 0 }}>&#8593; $131.36 (1.38%) 1D &#8250;</p>
+          <p style={{ fontSize: '26px', fontWeight: '500', color: '#111827', letterSpacing: '-0.02em', margin: '0 0 4px' }}>$33,683.80</p>
+          <p style={{ fontSize: '12px', color: '#22C55E', fontWeight: '500', margin: 0 }}>&#8593; $131.36 (1.38%) 1D &#8250;</p>
         </div>
 
         <div style={{ padding: '6px 16px 2px' }}>
@@ -84,7 +84,7 @@ function PhoneMockup() {
 
         <div style={{ display: 'flex', padding: '4px 14px 10px', gap: '0' }}>
           {['1H','1D','1W','1M','1Y','All'].map((t, i) => (
-            <span key={t} style={{ fontSize: '11px', fontWeight: '600', padding: '4px 7px', borderRadius: '6px', background: i === 1 ? '#1652F0' : 'transparent', color: i === 1 ? '#fff' : '#9CA3AF', cursor: 'default' }}>{t}</span>
+            <span key={t} style={{ fontSize: '11px', fontWeight: '500', padding: '4px 7px', borderRadius: '6px', background: i === 1 ? '#1652F0' : 'transparent', color: i === 1 ? '#fff' : '#9CA3AF', cursor: 'default' }}>{t}</span>
           ))}
         </div>
 
@@ -146,24 +146,24 @@ function Home() {
           <div className="hero-anim-left">
             <PhoneMockup />
           </div>
-          <div className="hero-anim-right" >
-            <h1 style={{ fontSize: '64px', fontWeight: '400', color: '#000000', lineHeight: '1.1', letterSpacing: '-0.035em', marginBottom: '16px', width:'814.141px', height:'64px' }}>
+          <div className="hero-anim-right">
+            <h1 style={{ fontSize: 'clamp(2.25rem, 5vw, 3.75rem)', fontWeight: '500', color: '#111827', lineHeight: '1.1', letterSpacing: '-0.035em', marginBottom: '16px' }}>
               The future of<br />finance is here.
             </h1>
-            <p style={{ fontSize: '1rem', color: '#000000', fontWeight: '600', marginBottom: '32px', lineHeight: '28px' ,width:'814.141px', height:'56px' }}>
+            <p style={{ fontSize: '1rem', color: '#000000ç', fontWeight: '500', marginBottom: '32px', lineHeight: '1.6' }}>
               Trade crypto and more on a platform you can trust.
             </p>
             <div style={{ display: 'flex', gap: '8px', marginBottom: '14px' }} className="hero-cta-row">
               <input
                 type="email"
-                placeholder="princebjr1638@gmail.com"
+                placeholder="Enter your email address"
                 style={{ flex: 1, padding: '13px 16px', border: '1.5px solid #E5E7EB', borderRadius: '8px', fontSize: '0.9375rem', color: '#111827', outline: 'none', minWidth: 0 }}
               />
               <Link
                 to="/signup"
-                style={{ background: '#1652F0', color: '#fff', fontWeight: '700', fontSize: '0.9375rem', padding: '13px 24px', borderRadius: '24px', textDecoration: 'none', whiteSpace: 'nowrap', flexShrink: 0, display: 'inline-flex', alignItems: 'center' }}
+                style={{ background: '#1652F0', color: '#fff', fontWeight: '500', fontSize: '0.9375rem', padding: '13px 24px', borderRadius: '40px', textDecoration: 'none', whiteSpace: 'nowrap', flexShrink: 0, display: 'inline-flex', alignItems: 'center' }}
               >
-                Sign Up
+                Sign up
               </Link>
             </div>
           </div>
@@ -171,17 +171,17 @@ function Home() {
       </section>
 
 
-      
+      {/* EXPLORE CRYPTO */}
       <section style={{ background: '#F9FAFB', padding: '80px 0', borderTop: '1px solid #F3F4F6' }}>
         <div ref={exploreRef} style={{ maxWidth: '1160px', margin: '0 auto', padding: '0 24px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '56px', alignItems: 'center' }} className="explore-grid reveal reveal-fade-up">
           <div>
-            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: '800', color: '#111827', letterSpacing: '-0.025em', lineHeight: '1.15', marginBottom: '16px' }}>
+            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: '500', color: '#111827', letterSpacing: '-0.025em', lineHeight: '1.15', marginBottom: '16px' }}>
               Explore crypto<br />like Bitcoin
             </h2>
             <p style={{ fontSize: '1.0625rem', color: '#6B7280', lineHeight: '1.7', marginBottom: '32px' }}>
               Simply and securely buy, sell, and manage hundreds of cryptocurrencies.
             </p>
-            <Link to="/explore" style={{ display: 'inline-block', background: '#1652F0', color: '#fff', fontWeight: '700', fontSize: '0.9375rem', padding: '13px 28px', borderRadius: '8px', textDecoration: 'none' }}>
+            <Link to="/explore" style={{ display: 'inline-block', background: '#1652F0', color: '#fff', fontWeight: '500', fontSize: '0.9375rem', padding: '13px 28px', borderRadius: '40px', textDecoration: 'none' }}>
               See more assets
             </Link>
           </div>
@@ -189,7 +189,7 @@ function Home() {
           <div style={{ background: '#0A0B0D', borderRadius: '20px', padding: '20px', boxShadow: '0 20px 48px rgba(0,0,0,0.25)' }}>
             <div style={{ display: 'flex', gap: '3px', marginBottom: '16px', background: '#1C1C1E', padding: '4px', borderRadius: '10px' }}>
               {[['tradable','Tradable'],['gainers','Top gainers'],['new','New on Coinbase']].map(([k, lbl]) => (
-                <button key={k} onClick={() => setActiveTab(k)} style={{ flex: 1, padding: '8px 4px', borderRadius: '7px', border: 'none', cursor: 'pointer', fontSize: '11px', fontWeight: '600', background: activeTab === k ? '#ffffff' : 'transparent', color: activeTab === k ? '#111827' : '#6B7280', transition: 'all 0.15s' }}>
+                <button key={k} onClick={() => setActiveTab(k)} style={{ flex: 1, padding: '8px 4px', borderRadius: '7px', border: 'none', cursor: 'pointer', fontSize: '11px', fontWeight: '500', background: activeTab === k ? '#ffffff' : 'transparent', color: activeTab === k ? '#111827' : '#6B7280', transition: 'all 0.15s' }}>
                   {lbl}
                 </button>
               ))}
@@ -208,44 +208,44 @@ function Home() {
                       <span style={{ color: '#fff', fontWeight: '800', fontSize: '11px' }}>{crypto.symbol.slice(0,2).toUpperCase()}</span>
                     </div>
                     <div style={{ flex: 1 }}>
-                      <p style={{ fontSize: '13px', fontWeight: '600', color: '#F3F4F6', margin: 0 }}>{crypto.name}</p>
+                      <p style={{ fontSize: '13px', fontWeight: '500', color: '#F3F4F6', margin: 0 }}>{crypto.name}</p>
                       <p style={{ fontSize: '11px', color: '#6B7280', margin: 0 }}>{crypto.symbol}</p>
                     </div>
                     <div style={{ textAlign: 'right' }}>
-                      <p style={{ fontSize: '13px', fontWeight: '700', color: '#F3F4F6', margin: 0, fontVariantNumeric: 'tabular-nums' }}>{formatPrice(crypto.price)}</p>
-                      <p style={{ fontSize: '11px', fontWeight: '600', color: isUp ? '#22C55E' : '#EF4444', margin: 0 }}>{isUp ? '\u2191' : '\u2193'} {Math.abs(crypto.change24h).toFixed(2)}%</p>
+                      <p style={{ fontSize: '13px', fontWeight: '500', color: '#F3F4F6', margin: 0, fontVariantNumeric: 'tabular-nums' }}>{formatPrice(crypto.price)}</p>
+                      <p style={{ fontSize: '11px', fontWeight: '500', color: isUp ? '#22C55E' : '#EF4444', margin: 0 }}>{isUp ? '\u2191' : '\u2193'} {Math.abs(crypto.change24h).toFixed(2)}%</p>
                     </div>
                   </Link>
                 );
               })}
             </div>
             <div style={{ textAlign: 'center', marginTop: '14px', paddingTop: '14px', borderTop: '1px solid #1C1C1E' }}>
-              <Link to="/explore" style={{ fontSize: '13px', fontWeight: '600', color: '#3B82F6', textDecoration: 'none' }}>View all assets &#8594;</Link>
+              <Link to="/explore" style={{ fontSize: '13px', fontWeight: '500', color: '#3B82F6', textDecoration: 'none' }}>View all assets &#8594;</Link>
             </div>
           </div>
         </div>
       </section>
 
-     
+      {/* ADVANCED TRADER */}
       <section style={{ padding: '88px 0', background: '#ffffff', borderTop: '1px solid #F3F4F6' }}>
         <div ref={advancedRef} style={{ maxWidth: '1160px', margin: '0 auto', padding: '0 24px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '56px', alignItems: 'center' }} className="hero-grid reveal reveal-left">
-          
+          {/* Trading chart mockup */}
           <div style={{ background: '#0A0B0D', borderRadius: '20px', padding: '0', overflow: 'hidden', boxShadow: '0 24px 60px rgba(0,0,0,0.22)', minHeight: '300px', position: 'relative' }}>
             <div style={{ padding: '14px 16px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}>
                 <div style={{ width: '22px', height: '22px', borderRadius: '50%', background: '#F59E0B', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <span style={{ color: '#fff', fontSize: '9px', fontWeight: '900' }}>BT</span>
+                  <span style={{ color: '#fff', fontSize: '9px', fontWeight: '500' }}>BT</span>
                 </div>
-                <span style={{ color: '#E5E7EB', fontSize: '12px', fontWeight: '700' }}>BTC-USD</span>
-                <span style={{ color: '#22C55E', fontSize: '11px', fontWeight: '600' }}>+2.4%</span>
+                <span style={{ color: '#E5E7EB', fontSize: '12px', fontWeight: '500' }}>BTC-USD</span>
+                <span style={{ color: '#22C55E', fontSize: '11px', fontWeight: '500' }}>+2.4%</span>
               </div>
               <div style={{ display: 'flex', gap: '8px' }}>
                 {['1H','1D','1W'].map((t,i) => <span key={t} style={{ fontSize: '10px', color: i===1?'#fff':'#6B7280', background: i===1?'#374151':'transparent', padding: '2px 7px', borderRadius: '4px', cursor: 'default' }}>{t}</span>)}
               </div>
             </div>
             <div style={{ padding: '8px 16px 0' }}>
-              <p style={{ color: '#fff', fontSize: '20px', fontWeight: '800', margin: '0', letterSpacing: '-0.02em' }}>$43,218.50</p>
-              <p style={{ color: '#22C55E', fontSize: '11px', margin: '0 0 6px', fontWeight: '600' }}>▲ $1,032.10 (+2.45%)</p>
+              <p style={{ color: '#fff', fontSize: '20px', fontWeight: '500', margin: '0', letterSpacing: '-0.02em' }}>$43,218.50</p>
+              <p style={{ color: '#22C55E', fontSize: '11px', margin: '0 0 6px', fontWeight: '500' }}>▲ $1,032.10 (+2.45%)</p>
             </div>
             <svg viewBox="0 0 380 130" width="100%" height="130" preserveAspectRatio="none" style={{ display: 'block' }}>
               <defs>
@@ -254,7 +254,7 @@ function Home() {
                   <stop offset="100%" stopColor="#22C55E" stopOpacity="0.02"/>
                 </linearGradient>
               </defs>
-              
+              {/* Candlesticks */}
               {[
                 [20,80,65,72,88],[36,70,55,62,78],[52,90,72,76,92],[68,65,50,55,70],
                 [84,55,40,42,60],[100,45,30,32,50],[116,50,35,38,55],[132,40,22,26,44],
@@ -273,11 +273,11 @@ function Home() {
                 );
               })}
             </svg>
-            
+            {/* Order book panel */}
             <div style={{ margin: '0 12px 12px', background: '#111213', borderRadius: '10px', padding: '10px 12px' }}>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
                 <div>
-                  <p style={{ fontSize: '9px', color: '#6B7280', fontWeight: '700', letterSpacing: '0.05em', margin: '0 0 6px' }}>BIDS</p>
+                  <p style={{ fontSize: '9px', color: '#6B7280', fontWeight: '500', letterSpacing: '0.05em', margin: '0 0 6px' }}>BIDS</p>
                   {[['43,210','1.24'],['43,190','0.85'],['43,170','2.10']].map(([p,s]) => (
                     <div key={p} style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '3px' }}>
                       <span style={{ fontSize: '10px', color: '#22C55E', fontVariantNumeric: 'tabular-nums' }}>{p}</span>
@@ -286,7 +286,7 @@ function Home() {
                   ))}
                 </div>
                 <div>
-                  <p style={{ fontSize: '9px', color: '#6B7280', fontWeight: '700', letterSpacing: '0.05em', margin: '0 0 6px' }}>ASKS</p>
+                  <p style={{ fontSize: '9px', color: '#6B7280', fontWeight: '500', letterSpacing: '0.05em', margin: '0 0 6px' }}>ASKS</p>
                   {[['43,230','0.92'],['43,250','1.55'],['43,270','0.44']].map(([p,s]) => (
                     <div key={p} style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '3px' }}>
                       <span style={{ fontSize: '10px', color: '#EF4444', fontVariantNumeric: 'tabular-nums' }}>{p}</span>
@@ -297,49 +297,49 @@ function Home() {
               </div>
             </div>
           </div>
-         
+          {/* Text */}
           <div>
-            <h2 style={{ fontSize: 'clamp(1.875rem, 4vw, 3rem)', fontWeight: '800', color: '#111827', lineHeight: '1.12', letterSpacing: '-0.03em', marginBottom: '16px' }}>
+            <h2 style={{ fontSize: 'clamp(1.875rem, 4vw, 3rem)', fontWeight: '500', color: '#111827', lineHeight: '1.12', letterSpacing: '-0.03em', marginBottom: '16px' }}>
               Powerful tools, designed<br />for the advanced trader.
             </h2>
-            <p style={{ fontSize: '1rem', color: '#D97706', fontWeight: '600', marginBottom: '12px', lineHeight: '1.6' }}>
+            <p style={{ fontSize: '1rem', color: '#D97706', fontWeight: '500', marginBottom: '12px', lineHeight: '1.6' }}>
               Powerful analytical tools with the safety and security of Coinbase deliver the ultimate trading experience.
             </p>
             <p style={{ fontSize: '0.9375rem', color: '#6B7280', lineHeight: '1.7', marginBottom: '32px' }}>
               Tap into sophisticated charting capabilities, real-time order books, and deep liquidity across hundreds of markets.
             </p>
-            <Link to="/advanced-trading" style={{ display: 'inline-block', background: '#111827', color: '#fff', fontWeight: '700', fontSize: '0.9375rem', padding: '13px 28px', borderRadius: '99px', textDecoration: 'none' }}>
+            <Link to="/advanced-trading" style={{ display: 'inline-block', background: '#111827', color: '#fff', fontWeight: '500', fontSize: '0.9375rem', padding: '13px 28px', borderRadius: '99px', textDecoration: 'none' }}>
               Start trading
             </Link>
           </div>
         </div>
       </section>
 
-      
+      {/* COINBASE ONE — ZERO FEES */}
       <section style={{ padding: '88px 0', background: '#ffffff' }}>
         <div ref={coinbaseOneRef} style={{ maxWidth: '1160px', margin: '0 auto', padding: '0 24px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '56px', alignItems: 'center' }} className="explore-grid reveal reveal-right">
-          
+          {/* Text */}
           <div>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', border: '1.5px solid #E5E7EB', borderRadius: '99px', padding: '5px 12px', marginBottom: '20px' }}>
               <div style={{ width: '14px', height: '14px', borderRadius: '50%', background: '#1652F0', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <span style={{ color: '#fff', fontSize: '7px', fontWeight: '900' }}>C</span>
               </div>
-              <span style={{ fontSize: '11px', fontWeight: '700', color: '#374151', letterSpacing: '0.05em', textTransform: 'uppercase' }}>COINBASE ONE</span>
+              <span style={{ fontSize: '11px', fontWeight: '500', color: '#374151', letterSpacing: '0.05em', textTransform: 'uppercase' }}>COINBASE ONE</span>
             </div>
-            <h2 style={{ fontSize: 'clamp(2rem, 4.5vw, 3.25rem)', fontWeight: '800', color: '#111827', lineHeight: '1.1', letterSpacing: '-0.035em', marginBottom: '16px' }}>
+            <h2 style={{ fontSize: 'clamp(2rem, 4.5vw, 3.25rem)', fontWeight: '500', color: '#111827', lineHeight: '1.1', letterSpacing: '-0.035em', marginBottom: '16px' }}>
               Zero trading fees,<br />more rewards.
             </h2>
-            <p style={{ fontSize: '1rem', color: '#D97706', fontWeight: '600', marginBottom: '12px', lineHeight: '1.6' }}>
+            <p style={{ fontSize: '1rem', color: '#D97706', fontWeight: '500', marginBottom: '12px', lineHeight: '1.6' }}>
               Get more out of crypto with one membership: zero trading fees, boosted rewards, priority support, and more.
             </p>
-            <Link to="/signup" style={{ display: 'inline-block', background: '#111827', color: '#fff', fontWeight: '700', fontSize: '0.9375rem', padding: '13px 28px', borderRadius: '99px', textDecoration: 'none', marginTop: '8px' }}>
+            <Link to="/signup" style={{ display: 'inline-block', background: '#111827', color: '#fff', fontWeight: '500', fontSize: '0.9375rem', padding: '13px 28px', borderRadius: '99px', textDecoration: 'none', marginTop: '8px' }}>
               Claim free trial
             </Link>
           </div>
-          
+          {/* Phone mockup */}
           <div style={{ background: '#F3F4F6', borderRadius: '24px', padding: '28px 24px', boxShadow: '0 8px 32px rgba(0,0,0,0.08)', maxWidth: '340px', margin: '0 auto', width: '100%' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
-              <span style={{ fontSize: '12px', fontWeight: '700', color: '#111827' }}>3:57</span>
+              <span style={{ fontSize: '12px', fontWeight: '500', color: '#111827' }}>3:57</span>
               <div style={{ display: 'flex', gap: '4px', alignItems: 'center' }}>
                 <svg width="15" height="10" viewBox="0 0 15 10"><rect x="0" y="5" width="3" height="5" rx="0.5" fill="#374151"/><rect x="4" y="3" width="3" height="7" rx="0.5" fill="#374151"/><rect x="8" y="1" width="3" height="9" rx="0.5" fill="#374151"/><rect x="12" y="0" width="3" height="10" rx="0.5" fill="#E5E7EB"/></svg>
                 <svg width="16" height="11" viewBox="0 0 16 11" fill="none"><path d="M8 2.5C10.5 2.5 12.7 3.6 14.2 5.4L15.5 4C13.6 1.7 10.9 0 8 0C5.1 0 2.4 1.7 0.5 4L1.8 5.4C3.3 3.6 5.5 2.5 8 2.5Z" fill="#374151"/><path d="M8 5.5C9.6 5.5 11 6.2 12 7.4L13.3 6C11.9 4.5 10 3.5 8 3.5C6 3.5 4.1 4.5 2.7 6L4 7.4C5 6.2 6.4 5.5 8 5.5Z" fill="#374151"/><circle cx="8" cy="10" r="1.5" fill="#374151"/></svg>
@@ -356,15 +356,15 @@ function Home() {
                   <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
                 </div>
               </div>
-              <p style={{ fontSize: '15px', fontWeight: '700', color: '#111827', margin: '0 0 4px' }}>Trade successful!</p>
+              <p style={{ fontSize: '15px', fontWeight: '500', color: '#111827', margin: '0 0 4px' }}>Trade successful!</p>
               <p style={{ fontSize: '12px', color: '#6B7280', margin: 0 }}>You got 0.010423 BTC</p>
             </div>
             <div style={{ background: '#ffffff', borderRadius: '12px', padding: '12px 14px', marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '10px' }}>
               <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: '#1652F0', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <span style={{ color: '#fff', fontSize: '9px', fontWeight: '900' }}>C</span>
+                <span style={{ color: '#fff', fontSize: '9px', fontWeight: '500' }}>C</span>
               </div>
               <div>
-                <p style={{ fontSize: '11px', fontWeight: '700', color: '#111827', margin: 0 }}>$44.68 — No trading fees with Coinbase One</p>
+                <p style={{ fontSize: '11px', fontWeight: '500', color: '#111827', margin: 0 }}>$44.68 — No trading fees with Coinbase One</p>
               </div>
             </div>
             <div style={{ background: '#ffffff', borderRadius: '12px', padding: '12px 14px', display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
@@ -372,33 +372,33 @@ function Home() {
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round"><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z"/></svg>
               </div>
               <div>
-                <p style={{ fontSize: '11px', fontWeight: '700', color: '#111827', margin: '0 0 2px' }}>Exclusive member benefits</p>
+                <p style={{ fontSize: '11px', fontWeight: '500', color: '#111827', margin: '0 0 2px' }}>Exclusive member benefits</p>
                 <p style={{ fontSize: '10px', color: '#6B7280', margin: '0 0 4px', lineHeight: '1.4' }}>Coinbase One members get boosted staking rewards.</p>
-                <a href="#" style={{ fontSize: '10px', color: '#1652F0', fontWeight: '600', textDecoration: 'none' }}>Learn more</a>
+                <a href="#" style={{ fontSize: '10px', color: '#1652F0', fontWeight: '500', textDecoration: 'none' }}>Learn more</a>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      
+      {/* NEW TO CRYPTO — LEARN BASICS */}
       <section style={{ padding: '80px 0 72px', background: '#F3F4F6' }}>
         <div style={{ maxWidth: '1160px', margin: '0 auto', padding: '0 24px' }}>
-          
+          {/* Header row */}
           <div ref={learnHdrRef} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '48px', alignItems: 'flex-end', marginBottom: '40px' }} className="explore-grid reveal reveal-fade-up">
-            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: '800', color: '#111827', lineHeight: '1.12', letterSpacing: '-0.03em', margin: 0 }}>
+            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: '500', color: '#111827', lineHeight: '1.12', letterSpacing: '-0.03em', margin: 0 }}>
               New to crypto?<br />Learn some<br />crypto basics
             </h2>
             <div>
               <p style={{ fontSize: '0.9375rem', color: '#6B7280', lineHeight: '1.65', marginBottom: '20px' }}>
                 Beginner guides, practical tips, and market updates for first-timers, experienced investors, and everyone in between
               </p>
-              <Link to="/learn" style={{ display: 'inline-block', background: '#111827', color: '#fff', fontWeight: '700', fontSize: '0.9375rem', padding: '12px 26px', borderRadius: '99px', textDecoration: 'none' }}>
+              <Link to="/learn" style={{ display: 'inline-block', background: '#111827', color: '#fff', fontWeight: '500', fontSize: '0.9375rem', padding: '12px 26px', borderRadius: '99px', textDecoration: 'none' }}>
                 Read More
               </Link>
             </div>
           </div>
-         
+          {/* Article cards */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }} className="article-grid">
             {[
               {
@@ -480,7 +480,7 @@ function Home() {
                   {illustration}
                 </div>
                 <div style={{ padding: '20px' }}>
-                  <h3 style={{ fontSize: '1rem', fontWeight: '700', color: '#111827', margin: '0 0 10px', lineHeight: '1.4' }}>{title}</h3>
+                  <h3 style={{ fontSize: '1rem', fontWeight: '500', color: '#111827', margin: '0 0 10px', lineHeight: '1.4' }}>{title}</h3>
                   <p style={{ fontSize: '0.875rem', color: '#6B7280', margin: 0, lineHeight: '1.6' }}>{desc}</p>
                 </div>
               </Link>
@@ -490,11 +490,11 @@ function Home() {
         </div>
       </section>
 
-      
+      {/* FEATURES */}
       <section style={{ padding: '88px 0', background: '#ffffff' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 24px' }}>
           <div ref={featHdrRef} style={{ textAlign: 'center', marginBottom: '56px' }} className="reveal reveal-fade-up">
-            <h2 style={{ fontSize: 'clamp(1.875rem, 4vw, 2.625rem)', fontWeight: '800', color: '#111827', lineHeight: '1.2', letterSpacing: '-0.02em', margin: '0 0 14px' }}>
+            <h2 style={{ fontSize: 'clamp(1.875rem, 4vw, 2.625rem)', fontWeight: '500', color: '#111827', lineHeight: '1.2', letterSpacing: '-0.02em', margin: '0 0 14px' }}>
               Create your cryptocurrency<br />portfolio today
             </h2>
             <p style={{ fontSize: '1.0625rem', color: '#6B7280', maxWidth: '460px', margin: '0 auto', lineHeight: '1.65' }}>
@@ -512,7 +512,7 @@ function Home() {
                 <div style={{ width: '64px', height: '64px', background: bg, borderRadius: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 24px' }}>
                   <svg width="28" height="28" fill="none" stroke={icon} strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d={svg}/></svg>
                 </div>
-                <h3 style={{ fontSize: '1.125rem', fontWeight: '700', color: '#111827', margin: '0 0 10px' }}>{label}</h3>
+                <h3 style={{ fontSize: '1.125rem', fontWeight: '500', color: '#111827', margin: '0 0 10px' }}>{label}</h3>
                 <p style={{ fontSize: '0.9375rem', color: '#6B7280', lineHeight: '1.65', margin: 0 }}>{desc}</p>
               </div>
               </Reveal>
@@ -521,13 +521,13 @@ function Home() {
         </div>
       </section>
 
-      
+      {/* STATS */}
       <section style={{ background: '#F9FAFB', borderTop: '1px solid #F3F4F6', borderBottom: '1px solid #F3F4F6', padding: '56px 24px' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '32px', textAlign: 'center' }}>
           {[{ value: '$100B+', label: 'Total assets traded' }, { value: '100+', label: 'Countries supported' }, { value: '50M+', label: 'Verified users' }].map(({ value, label }, idx) => (
             <Reveal key={label} variant="reveal-fade-up" delay={`reveal-delay-${idx + 1}`}>
             <div>
-              <p style={{ fontSize: 'clamp(2rem, 3.5vw, 2.5rem)', fontWeight: '800', color: '#111827', margin: '0 0 6px', letterSpacing: '-0.02em' }}>{value}</p>
+              <p style={{ fontSize: 'clamp(2rem, 3.5vw, 2.5rem)', fontWeight: '500', color: '#111827', margin: '0 0 6px', letterSpacing: '-0.02em' }}>{value}</p>
               <p style={{ fontSize: '0.9375rem', color: '#6B7280', margin: 0 }}>{label}</p>
             </div>
             </Reveal>
@@ -535,17 +535,17 @@ function Home() {
         </div>
       </section>
 
-      
+      {/* LEARN & EARN CTA */}
       <section style={{ padding: '80px 24px', background: '#ffffff' }}>
         <div ref={ctaRef} style={{ maxWidth: '820px', margin: '0 auto', background: '#1652F0', borderRadius: '20px', padding: 'clamp(40px, 6vw, 72px) clamp(24px, 5vw, 64px)', textAlign: 'center' }} className="reveal reveal-scale">
-          <p style={{ fontSize: '0.75rem', fontWeight: '700', letterSpacing: '0.1em', color: 'rgba(255,255,255,0.65)', textTransform: 'uppercase', margin: '0 0 14px' }}>LEARN &amp; EARN</p>
-          <h2 style={{ fontSize: 'clamp(1.5rem, 4vw, 2.25rem)', fontWeight: '800', color: '#ffffff', lineHeight: '1.25', margin: '0 0 14px', letterSpacing: '-0.02em' }}>
+          <p style={{ fontSize: '0.75rem', fontWeight: '500', letterSpacing: '0.1em', color: 'rgba(255,255,255,0.65)', textTransform: 'uppercase', margin: '0 0 14px' }}>LEARN &amp; EARN</p>
+          <h2 style={{ fontSize: 'clamp(1.5rem, 4vw, 2.25rem)', fontWeight: '500', color: '#ffffff', lineHeight: '1.25', margin: '0 0 14px', letterSpacing: '-0.02em' }}>
             Earn up to $100 in rewards
           </h2>
           <p style={{ fontSize: '1.0625rem', color: 'rgba(255,255,255,0.8)', lineHeight: '1.65', maxWidth: '460px', margin: '0 auto 32px' }}>
             Discover how specific cryptocurrencies work and get a bit of each crypto to try out for yourself.
           </p>
-          <Link to="/learn" style={{ display: 'inline-block', background: '#ffffff', color: '#1652F0', fontWeight: '700', fontSize: '0.9375rem', padding: '13px 32px', borderRadius: '8px', textDecoration: 'none' }}>
+          <Link to="/learn" style={{ display: 'inline-block', background: '#ffffff', color: '#1652F0', fontWeight: '500', fontSize: '0.9375rem', padding: '13px 32px', borderRadius: '8px', textDecoration: 'none' }}>
             Start earning
           </Link>
         </div>

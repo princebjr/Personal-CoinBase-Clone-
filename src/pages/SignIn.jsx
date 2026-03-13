@@ -1,9 +1,8 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import useReveal from '../hooks/useReveal';
-
-
+import coinbaseLogo from '../assets/coinbase_logo@2x.png'; // Import original Coinbase logo
 
 function SignIn() {
   const [email, setEmail] = useState('');
@@ -18,27 +17,28 @@ function SignIn() {
   };
 
   return (
-    <div style={{ minHeight: '100vh', background: '#FFFFFF', display: 'flex', flexDirection: 'column', lineHeight: 'normal', letterSpacing: 'normal', fontSize:'16px',width:'448px', margin:'0 auto' ,}}>
-      
-      <div style={{ padding: '22px 28px',gap:'10px', display: 'flex', alignItems: 'center' }}>
+    <div style={{ minHeight: '100vh', background: '#fff', display: 'flex', flexDirection: 'column' }}>
+      {/* Logo */}
+      <div style={{ padding: '22px 28px' }}>
         <Link to="/" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
-          <svg width="32" height="32" viewBox="0 0 28 28" fill="none">
-            <circle cx="14" cy="14" r="14" fill="#fff" />
-            <path d="M 20.36 20.36 A 9 9 0 1 1 20.36 7.64" fill="none" stroke="#1652F0" strokeWidth="4.5" strokeLinecap="round"/>
-          </svg>
+          <img 
+            src={coinbaseLogo} 
+            alt="Coinbase Logo" 
+            style={{ width: '28px', height: '28px', objectFit: 'contain' }} 
+          />
         </Link>
       </div>
 
-     
+      {/* Main content */}
       <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '16px 24px 64px' }}>
         <div ref={formRef} style={{ width: '100%', maxWidth: '480px' }} className="reveal reveal-fade-up">
 
-          <h1 style={{ color: '#000000', fontSize: 'clamp(1.6rem, 5vw, 2rem)', fontWeight: '800', marginBottom: '28px', letterSpacing: '-0.025em', lineHeight: '1.2' }}>
+          <h1 style={{ color: '#000', fontSize: 'clamp(1.6rem, 5vw, 2rem)', fontWeight: '600', marginBottom: '28px', letterSpacing: '-0.025em', lineHeight: '1.2' }}>
             Sign in to Coinbase
           </h1>
 
           <form onSubmit={handleSubmit}>
-            <label style={{ display: 'block', color: '#0A0B0D', fontWeight: '', fontSize: '0.875rem', marginBottom: '8px' }}>
+            <label style={{ display: 'block', color: '#000', fontWeight: '600', fontSize: '0.875rem', marginBottom: '8px' }}>
               Email
             </label>
             <input
@@ -48,83 +48,74 @@ function SignIn() {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Your email address"
               style={{
-                width: '396px',
-                lineHeight: '24px',
-                letterSpacing: 'normal',
-                background: '#ffffff',
-                border: '1.5px solid #374151',
-                borderRadius: '8px',
+                width: '100%',
+                background: '#fff',
+                border: '1.5px solid #D1D5DB',
+                borderRadius: '10px',
                 padding: '14px 16px',
-                color: '#000000',
-                fontSize: '16px',
+                color: '#000',
+                fontSize: '0.9375rem',
                 outline: 'none',
                 boxSizing: 'border-box',
                 marginBottom: '14px',
               }}
-              onFocus={e => { e.target.style.borderColor = '#4A90D9'; }}
-              onBlur={e => { e.target.style.borderColor = '#374151'; }}
+              onFocus={e => { e.target.style.borderColor = '#1652F0'; }}
+              onBlur={e => { e.target.style.borderColor = '#D1D5DB'; }}
             />
             <button
               type="submit"
               style={{
-                width: '400px',
-                height: '56px',
-                height: '48px',
-                fontfamily:'Times',
-                background: '#0052ff',
+                width: '100%',
+                background: '#1652F0',
                 color: '#fff',
-                fontWeight: '600',
-                letterSpacing: 'normal',
-                fontSize: '16px',
-                padding: '32px',
-                borderRadius: '56px',
+                fontWeight: '700',
+                fontSize: '1rem',
+                padding: '14px',
+                borderRadius: '40px',
                 border: 'none',
                 cursor: 'pointer',
-          
                 marginBottom: '20px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                
-                
+                letterSpacing: '0.01em',
               }}
-              onMouseEnter={e => { e.currentTarget.style.background = '#0052ff'; }}
-              onMouseLeave={e => { e.currentTarget.style.background = '#0052ff'; }}
+              onMouseEnter={e => { e.currentTarget.style.background = '#0F47D4'; }}
+              onMouseLeave={e => { e.currentTarget.style.background = '#1652F0'; }}
             >
               Continue
             </button>
           </form>
 
-          
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '14px',width:'400px' }}>
-            <div style={{ flex: 1, height: '1px', background: '#121316' }} />
-            <span style={{ color: '#5B616E', fontSize: '13px', fontWeight: '400', letterSpacing: 'normal' }}>OR</span>
-            <div style={{ flex: 1, height: '1px', background: '#121316' }} />
+          {/* OR divider */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '14px', width: '100%', }}>
+            <div style={{ flex: 1, height: '1px', background: '#E5E7EB' }} />
+            <span style={{ color: '#6B7280', fontSize: '0.8125rem', fontWeight: '600', letterSpacing: '0.06em' }}>OR</span>
+            <div style={{ flex: 1, height: '1px', background: '#E5E7EB' }} />
           </div>
 
-         
+          {/* Social / Passkey buttons */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '28px' }}>
-           
+            {/* Passkey */}
             <button
               type="button"
-              style={{ display: 'flex', width: '400px', height: '56px', alignItems: 'center', justifyContent: 'center', gap: '12px', fontfamily:'Times', background: '#EEF0F3',  borderRadius: '56px', padding: '32px', color:'#0A0B0D', fontWeight: '600', fontSize: '1rem', cursor: 'pointer' }}
-              onMouseEnter={e => { e.currentTarget.style.background = '#18191C'; }}
-              onMouseLeave={e => { e.currentTarget.style.background = '#111213'; }}
+              style={{ display: 'flex', width: '100%', alignItems: 'center', justifyContent: 'center', gap: '12px', background: '#F3F4F6', border: '1px solid #D1D5DB', borderRadius: '40px', padding: '13px', color: '#000', fontWeight: '700', fontSize: '1rem', cursor: 'pointer' }}
+              onMouseEnter={e => { e.currentTarget.style.background = '#E5E7EB'; }}
+              onMouseLeave={e => { e.currentTarget.style.background = '#F3F4F6'; }}
             >
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" left = "10px"
-       viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-       <circle cx="12" cy="7" r="4"/>
-       <path d="M5.5 21a6.5 6.5 0 0 1 13 0"/>
-  </svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <circle cx="9" cy="8" r="4" stroke="#000" strokeWidth="2" />
+                <path d="M1 20c0-4 3.582-7 8-7" stroke="#000" strokeWidth="2" strokeLinecap="round" />
+                <path d="M16 14l1.5 1.5L21 12" stroke="#4ADE80" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <circle cx="19" cy="17" r="3" stroke="#000" strokeWidth="1.5" />
+                <line x1="21.5" y1="19.5" x2="23" y2="21" stroke="#000" strokeWidth="1.5" strokeLinecap="round" />
+              </svg>
               Sign in with Passkey
             </button>
 
-           
+            {/* Google */}
             <button
               type="button"
-              style={{ display: 'flex', width: '400px', height: '56px', alignItems: 'center', justifyContent: 'center', gap: '12px', background: '#EEF0F3', borderRadius: '56px', padding: '13px', color: '#0A0B0D', fontWeight: '700', fontSize: '1rem', cursor: 'pointer' }}
-              onMouseEnter={e => { e.currentTarget.style.background = '#18191C'; }}
-              onMouseLeave={e => { e.currentTarget.style.background = '#111213'; }}
+              style={{ display: 'flex', width: '100%', alignItems: 'center', justifyContent: 'center', gap: '12px', background: '#F3F4F6', border: '1px solid #D1D5DB', borderRadius: '40px', padding: '13px', color: '#000', fontWeight: '700', fontSize: '1rem', cursor: 'pointer' }}
+              onMouseEnter={e => { e.currentTarget.style.background = '#E5E7EB'; }}
+              onMouseLeave={e => { e.currentTarget.style.background = '#F3F4F6'; }}
             >
               <svg width="20" height="20" viewBox="0 0 24 24">
                 <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
@@ -135,21 +126,21 @@ function SignIn() {
               Sign in with Google
             </button>
 
-            
+            {/* Apple */}
             <button
               type="button"
-              style={{ display: 'flex',width: '400px', height: '56px', alignItems: 'center', justifyContent: 'center', gap: '12px', background: '#EEF0F3',  borderRadius: '56px', padding: '13px', color: '#0a0b0d', fontWeight: '700', fontSize: '1rem', cursor: 'pointer' }}
-              onMouseEnter={e => { e.currentTarget.style.background = '#18191C'; }}
-              onMouseLeave={e => { e.currentTarget.style.background = '#111213'; }}
+              style={{ display: 'flex', width: '100%', alignItems: 'center', justifyContent: 'center', gap: '12px', background: '#F3F4F6', border: '1px solid #D1D5DB', borderRadius: '40px', padding: '13px', color: '#000', fontWeight: '700', fontSize: '1rem', cursor: 'pointer' }}
+              onMouseEnter={e => { e.currentTarget.style.background = '#E5E7EB'; }}
+              onMouseLeave={e => { e.currentTarget.style.background = '#F3F4F6'; }}
             >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#0c0c0c">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#000">
                 <path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701" />
               </svg>
               Sign in with Apple
             </button>
           </div>
 
-          <p style={{ width: '400px', height: '24px', textAlign: 'center', fontSize: '0.875rem', color: '#000000' }}>
+          <p style={{ textAlign: 'center', fontSize: '0.875rem', color: '#374151' }}>
             Don't have an account?{' '}
             <Link to="/signup" style={{ color: '#1652F0', fontWeight: '600', textDecoration: 'none' }}>
               Sign up
@@ -163,4 +154,3 @@ function SignIn() {
 }
 
 export default SignIn;
-
